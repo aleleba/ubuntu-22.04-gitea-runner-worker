@@ -51,6 +51,10 @@ RUN sudo apt-get install -y kubectl
 #Finishing Instaling kubectl
 #Finishing Instaling kubectl
 
+# Script to make Docker In Docker Available
+RUN sudo update-alternatives --set iptables /usr/sbin/iptables-legacy
+RUN sudo update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy
+
 COPY docker-entrypoint.sh /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
 
