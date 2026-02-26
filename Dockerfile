@@ -15,7 +15,7 @@ RUN apt-get -y install vim
 # update the base packages and install Xvfb
 RUN apt-get update -y && \
     apt-get upgrade -y && \
-    apt-get install -y libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libnss3 libxss1 libasound2 libxtst6 xauth xvfb
+    apt-get install -y libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libnss3 libxss1 libasound2t64 libxtst6 xauth xvfb
 
 # Installing Node.js
 RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && \
@@ -36,7 +36,7 @@ RUN curl -sSL https://get.docker.com/ | sh
 VOLUME /var/lib/docker
 
 #Install Docker Compose
-RUN sudo curl -L https://github.com/docker/compose/releases/download/v2.23.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+RUN sudo curl -L https://github.com/docker/compose/releases/download/v5.1.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
 RUN sudo chmod +x /usr/local/bin/docker-compose
 RUN docker-compose --version
 #Finishing Installing Docker Compose
