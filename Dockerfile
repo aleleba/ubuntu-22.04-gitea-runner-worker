@@ -1,5 +1,5 @@
 # base
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
 # Update Package
 RUN apt-get update
