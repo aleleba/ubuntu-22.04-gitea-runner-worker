@@ -31,4 +31,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: gitea.p-lao.com/p-lao/ubuntu-node-apps:latest
+          tags: gitea.p-lao.com/aleleba/ubuntu-24.04-gitea-runner-worker:latest
