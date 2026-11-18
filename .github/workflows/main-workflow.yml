@@ -31,4 +31,5 @@ jobs:
         with:
           context: .
           push: true
+          platforms: linux/amd64,linux/arm64
           tags: gitea.p-lao.com/aleleba/ubuntu-24.04-gitea-runner-worker:latest
